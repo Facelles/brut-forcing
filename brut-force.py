@@ -32,8 +32,9 @@ def brute_force_login():
 
         # time.sleep(0.0001)  # change time if site dosen't work
 
-        if driver.current_url != driver.current_url:
+        if driver.current_url != login_url:
             print(f'Login successful with password : {password}')
+            print(driver.current_url)
         
     driver.quit()
 
