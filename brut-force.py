@@ -3,16 +3,16 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
 import itertools
 
-print('Path to your chrome driver')
+print('Path to your chrome driver:')
 driver_path = input()
 
 
-print('Url which you want brutforce ')
+print('Url which you want brutforce:')
 login_url = input()
 
-print('password_field_selector')
+print('password_field_selector:')
 password_field_selector = input()
-print('login_button_selector')
+print('login_button_selector:')
 login_button_selector = input()
 
 def brute_force_login():
