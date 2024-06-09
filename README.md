@@ -1,4 +1,4 @@
-# Before launch this code you must install selenium. Remember brut forcing it's not illegal,the author bears no responsibility for the actions, the code is written for initial purposes
+# Before launch this code you must install selenium. Remember brut forcing it's illegal,the author bears no responsibility for the actions, the code is written for initial purposes
 (If no warings you just run code (: )
 ```
 pip install selenium
